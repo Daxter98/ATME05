@@ -11,9 +11,9 @@ import atme05.*;
  *
  * @author madri
  */
-public class ConsultaSaldo extends Operacion{
+public class Saldo extends Operacion{
     
-    public ConsultaSaldo(int numCuenta, Pantalla pantalla, BDBanco bdBanco)
+    public Saldo(int numCuenta, Pantalla pantalla, BDBanco bdBanco)
     {
         super(numCuenta, pantalla, bdBanco);
     }

@@ -13,7 +13,6 @@ import javax.swing.JTextArea;
 public class Pantalla{
     //Constructor
     private final JTextArea display;
-    private int cuenta;
     private StringBuilder texto;
     
     public Pantalla(JTextArea display)
@@ -24,13 +23,12 @@ public class Pantalla{
     
     public void mostrarMenu()
     {
-        cuenta = ATM.numCuentaActual;
         texto = new StringBuilder("");
         texto.append("\t\t  Transacciones \t\t")
         .append("\n<------Retiro\t\t\t            Saldo------>")
         .append("\n\n\t\t                        Deposito------->")
         .append("\n\n\nCuenta: '")
-                .append(cuenta)
+                .append(ATM.numCuentaActual)
                 .append("'\t\t\t           Salir------->");
         
         
@@ -125,7 +123,7 @@ public class Pantalla{
     
     public void actualizarRetiro()
     {
-        texto = new StringBuilder("");
+        texto = new StringBuilder();
         texto.append("\t\t  Indique Cantidad \t\t")
         .append("\n\n\n\t\t     Teclee Monto");
         

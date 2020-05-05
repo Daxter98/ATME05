@@ -5,7 +5,7 @@
  */
 package atme05;
 
-import atme05.Transacciones.ConsultaSaldo;
+import atme05.Transacciones.Saldo;
 import atme05.Transacciones.Deposito;
 import atme05.Transacciones.Retiro;
 
@@ -679,7 +679,7 @@ public class ATM extends javax.swing.JFrame {
         switch(tipo)
         {
             case 1:
-                temp = new ConsultaSaldo(numCuentaActual, pantalla, bdBanco);
+                temp = new Saldo(numCuentaActual, pantalla, bdBanco);
                 break;
             case 2:
                 temp = new Deposito(numCuentaActual, pantalla, bdBanco,

@@ -5,13 +5,15 @@
  */
 package atme05;
 
+import java.util.Objects;
+
 /***
  * Clase que hace la representación de una Base de Datos Bancaria
  * Contiene cuentas y detalles de las mismas
  * @author madri
  */
 public class BDBanco {
-    private Cuenta cuentas[]; //Arreglo de cuentas para N usuarios
+    private Cuenta [] cuentas; //Arreglo de cuentas para N usuarios
     
     public BDBanco()
     {
@@ -55,12 +57,12 @@ public class BDBanco {
     /***
      * Con el metodo cuenta y el id introducido podemos
      * mostrar el saldo de la cuenta
-     * @param numCuenta
+     * @param numCuenta:cuenta
      * @return 
      */
     public double mostrarSaldoDisponible(int numCuenta)
     {
-        return obtenerCuenta(numCuenta).mostrarSaldoDisponible();
+        return Objects.requireNonNull(obtenerCuenta(numCuenta)).mostrarSaldoDisponible();
     }
     
     /***
@@ -70,16 +72,16 @@ public class BDBanco {
      */
     public double mostrarSaldoTotal(int numCuenta)
     {
-        return obtenerCuenta(numCuenta).mostrarSaldoTotal();
+        return Objects.requireNonNull(obtenerCuenta(numCuenta)).mostrarSaldoTotal();
     }
     
     public void depositar(int numCuenta, double cantidad)
     {
-        obtenerCuenta(numCuenta).depositar(cantidad);
+        Objects.requireNonNull(obtenerCuenta(numCuenta)).depositar(cantidad);
     }
     
     public void retirar(int numCuenta, double cantidad)
     {
-        obtenerCuenta(numCuenta).retirar(cantidad);
+        Objects.requireNonNull(obtenerCuenta(numCuenta)).retirar(cantidad);
     }
 }
